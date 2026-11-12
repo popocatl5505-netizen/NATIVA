@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NATIVA | PICA SABROSO</title>
+<meta name="description" content="NATIVA Salsa Macha Artesanal. Hecha en Tlaxcala, México, con aceite de oliva extra virgen, ingredientes orgánicos y sin conservadores.">
+<meta name="theme-color" content="#2c3a1c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NATIVA | PICA SABROSO">
+<meta property="og:description" content="Salsa macha artesanal hecha en Tlaxcala con aceite de oliva extra virgen. Sin conservadores. Frasco de 250 ml, $200 MXN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --olivo:#2c3a1c;
+  --olivo-claro:#43562b;
+  --guinda:#982a1f;
+  --guinda-claro:#b9402f;
+  --crema:#ede5d2;
+  --crema-2:#f4eedd;
+  --pergamino:#e3d8bd;
+  --talavera:#1f3a6e;
+  --talavera-claro:#2f579d;
+  --oro:#c2a04a;
+  --oro-claro:#dcbf6e;
+  --tinta:#1c1a12;
+  --humo:#6b6450;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--crema);
+  color:var(--tinta);
+  font-family:'Spectral',Georgia,serif;
+  font-weight:400;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--guinda);color:var(--crema-2)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ---------- Cenefa talavera (signature) ---------- */
+.cenefa{
+  height:26px;
+  width:100%;
+  background:
+    repeating-linear-gradient(90deg,
+      var(--talavera) 0 3px, transparent 3px 6px),
+    var(--crema-2);
+  position:relative;
+  background-size:12px 100%;
+}
+.cenefa-svg{display:block;width:100%;height:30px}
+
+/* ---------- Mono utility ---------- */
+.mono{font-family:'Space Mono',monospace;letter-spacing:.04em}
+.eyebrow{
+  font-family:'Space Mono',monospace;
+  font-size:.7rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--guinda);
+  font-weight:700;
+}
+
+/* ---------- TICKER ---------- */
+.ticker-bar{
+  background:var(--olivo);
+  color:var(--crema-2);
+  font-family:'Space Mono',monospace;
+  font-size:.78rem;
+  letter-spacing:.05em;
+  padding:9px 0;
+  overflow:hidden;
+  white-space:nowrap;
+  position:sticky;
+  top:0;
+  z-index:50;
+  border-bottom:1px solid rgba(220,191,110,.3);
+}
+.ticker-track{
+  display:inline-flex;
+  gap:3rem;
+  animation:scrollx 38s linear infinite;
+  will-change:transform;
+}
+.ticker-track span{display:inline-flex;align-items:center;gap:.5rem}
+.up{color:var(--oro-claro)}
+.dot{color:var(--guinda-claro)}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- NAV ---------- */
+nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 6vw;
+  background:var(--crema);
+  border-bottom:1px solid rgba(44,58,28,.14);
+  position:sticky;top:39px;z-index:40;
+}
+.brand{
+  font-family:'Playfair Display',serif;
+  font-weight:900;
+  font-size:1.55rem;
+  letter-spacing:.14em;
+  color:var(--olivo);
+}
+.navlinks{display:flex;gap:2rem;font-size:.82rem}
+.navlinks a{
+  font-family:'Space Mono',monospace;
+  letter-spacing:.06em;
+  color:var(--humo);
+  text-transform:uppercase;
+  font-size:.72rem;
+  transition:color .2s;
+  position:relative;
+}
+.navlinks a:hover{color:var(--guinda)}
+.nav-cta{
+  background:var(--guinda);color:var(--crema-2)!important;
+  padding:8px 18px;border-radius:2px;
+  font-family:'Space Mono',monospace;font-size:.7rem;
+  letter-spacing:.08em;text-transform:uppercase;
+}
+.nav-cta:hover{background:var(--olivo)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0;padding:10px 4px}
+.burger span{width:24px;height:2px;background:var(--olivo)}
+
+/* ---------- HERO ---------- */
+.hero{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  min-height:84vh;
+  align-items:stretch;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(194,160,74,.10), transparent 55%),
+    var(--crema);
+}
+.hero-left{
+  padding:6vh 5vw 6vh 6vw;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+}
+.prospecto-tag{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:'Space Mono',monospace;font-size:.68rem;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--talavera);
+  margin-bottom:1.8rem;
+}
+.prospecto-tag::before{
+  content:"";width:34px;height:1px;background:var(--talavera);
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-weight:800;
+  font-size:clamp(3rem,7vw,6.2rem);
+  line-height:.92;
+  color:var(--olivo);
+  letter-spacing:-.01em;
+}
+.hero h1 em{
+  font-style:italic;
+  font-weight:700;
+  color:var(--guinda);
+  display:block;
+}
+.hero-sub{
+  font-size:1.15rem;
+  color:var(--humo);
+  max-width:30ch;
+  margin:1.8rem 0 2.4rem;
+  font-weight:400;
+}
+.hero-sub strong{color:var(--olivo);font-weight:600}
+.hero-actions{display:flex;flex-direction:column;gap:.6rem;align-items:flex-start}
+.btn-primary{
+  background:var(--guinda);color:var(--crema-2);
+  padding:15px 30px;border-radius:2px;
+  font-family:'Space Mono',monospace;font-size:.78rem;
+  letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+  transition:transform .2s, background .2s;
+  border:none;cursor:pointer;
+}
+.btn-primary:hover{background:var(--olivo);transform:translateY(-2px)}
+.btn-ghost{
+  font-family:'Space Mono',monospace;font-size:.78rem;
+  letter-spacing:.05em;color:var(--olivo);
+  border-bottom:2px solid var(--oro);padding-bottom:3px;
+}
+.btn-ghost:hover{color:var(--guinda);border-color:var(--guinda)}
+
+.hero-right{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(160deg,#3a4a26,#222d15);
+}
+.hero-right img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 42%;
+  filter:saturate(1.05);
+}
+.hero-medallion{
+  position:absolute;left:5%;bottom:6%;
+  background:rgba(237,229,210,.94);
+  backdrop-filter:blur(2px);
+  padding:14px 20px;border-radius:3px;
+  border-left:3px solid var(--guinda);
+  font-family:'Space Mono',monospace;
+  z-index:3;max-width:240px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.hero-medallion .lab{font-size:.6rem;letter-spacing:.18em;color:var(--humo);text-transform:uppercase}
+.hero-medallion .val{font-size:1.5rem;color:var(--olivo);font-weight:700;line-height:1.1;margin-top:3px}
+.hero-medallion .note{font-size:.62rem;color:var(--guinda);margin-top:4px;font-family:'Spectral',serif}
+
+/* floating sello */
+.sello{
+  position:absolute;top:7%;right:7%;z-index:3;
+  width:108px;height:108px;
+}
+.sello-ring{transform-origin:60px 60px;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- PROSPECTUS STRIP ---------- */
+.prospectus{
+  background:var(--olivo);
+  color:var(--crema);
+  padding:0;
+}
+.prospectus-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.pcell{
+  padding:38px 30px;
+  border-right:1px solid rgba(220,191,110,.18);
+}
+.pcell:last-child{border-right:none}
+.pcell .k{
+  font-family:'Space Mono',monospace;font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--oro-claro);
+}
+.pcell .v{
+  font-family:'Playfair Display',serif;font-size:2.5rem;
+  font-weight:700;line-height:1;margin:.5rem 0 .3rem;color:var(--crema-2);
+}
+.pcell .v-sm{font-size:1.7rem;line-height:1.08;margin:.7rem 0 .5rem}
+.pcell .d{font-size:.85rem;color:rgba(237,229,210,.7)}
+
+/* ---------- SECTION SHELL ---------- */
+section{padding:7rem 6vw}
+section[id]{scroll-margin-top:96px}
+.sec-head{max-width:820px;margin-bottom:3.5rem}
+.sec-head h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.1rem,4.5vw,3.6rem);
+  font-weight:800;color:var(--olivo);line-height:1.04;
+  letter-spacing:-.01em;margin:.8rem 0 1rem;
+}
+.sec-head h2 em{font-style:italic;color:var(--guinda)}
+.sec-head p{font-size:1.1rem;color:var(--humo);max-width:60ch}
+
+/* ---------- TESIS / RAZONES ---------- */
+.tesis{background:var(--crema-2)}
+.razones{display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid rgba(44,58,28,.18)}
+.razon{
+  padding:2.6rem 2rem 2.8rem;
+  border-right:1px solid rgba(44,58,28,.14);
+  border-bottom:1px solid rgba(44,58,28,.14);
+  position:relative;transition:background .25s;
+}
+.razon:hover{background:var(--crema)}
+.razon .num{
+  font-family:'Space Mono',monospace;font-size:.72rem;
+  color:var(--talavera);letter-spacing:.1em;
+}
+.razon h3{
+  font-family:'Playfair Display',serif;font-size:1.5rem;
+  color:var(--olivo);margin:1.1rem 0 .7rem;font-weight:700;line-height:1.15;
+}
+.razon p{font-size:.96rem;color:var(--humo)}
+.razon .ic{font-size:1.6rem;line-height:1;margin-bottom:.2rem;filter:saturate(1.2)}
+
+/* ---------- PRODUCTO SPLIT ---------- */
+.producto{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:0;
+  align-items:stretch;padding:0;background:var(--olivo);
+}
+.prod-img{position:relative;overflow:hidden;min-height:560px}
+.prod-img img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 50%}
+.prod-info{
+  padding:6rem 5vw;color:var(--crema);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.prod-info .eyebrow{color:var(--oro-claro)}
+.prod-info h2{
+  font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);
+  color:var(--crema-2);font-weight:800;line-height:1.05;margin:1rem 0 1.4rem;
+}
+.prod-info h2 em{font-style:italic;color:var(--guinda-claro)}
+.prod-info > p{font-size:1.08rem;color:rgba(237,229,210,.82);max-width:46ch}
+.ficha{
+  margin-top:2.4rem;border-top:1px solid rgba(220,191,110,.3);
+}
+.ficha-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:14px 0;border-bottom:1px solid rgba(220,191,110,.16);
+  font-family:'Space Mono',monospace;font-size:.85rem;
+}
+.ficha-row .k{color:var(--oro-claro);letter-spacing:.04em}
+.ficha-row .v{color:var(--crema-2);text-align:right}
+
+/* ---------- USOS ---------- */
+.usos{background:#7a1f14;color:var(--crema-2);position:relative}
+.usos::after{content:"";position:absolute;left:0;right:0;top:calc(100% - 1px);height:110px;z-index:2;pointer-events:none;filter:drop-shadow(0 4px 5px rgba(28,26,18,.2));
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='110' viewBox='0 0 720 110'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237a1f14'/%3E%3Cstop offset='.12' stop-color='%237a1f14'/%3E%3Cstop offset='1' stop-color='%238f2718'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M0 0 L0 10 L40 10 C58.0 10 63 23.2 63 40.0 C63 49.0 60 53.0 60 60 A10 10 0 0 0 80 60 C80 53.0 77 49.0 77 40.0 C77 23.2 82.0 10 100 10 L148 10 C161.2 10 165 16.6 165 25.0 C165 25.3 163 28.1 163 33 A7 7 0 0 0 177 33 C177 28.1 175 25.3 175 25.0 C175 16.6 178.8 10 192 10 L231 10 C251.4 10 257 28.9 257 53.0 C257 70.8 253 75.6 253 84 A12 12 0 0 0 277 84 C277 75.6 273 70.8 273 53.0 C273 28.9 278.6 10 299 10 L350 10 C362.0 10 365 15.3 365 22.0 C365 19.3 363 22.1 363 27 A7 7 0 0 0 377 27 C377 22.1 375 19.3 375 22.0 C375 15.3 378.0 10 390 10 L424 10 C439.6 10 444 21.4 444 36.0 C444 43.1 441 46.7 441 53 A9 9 0 0 0 459 53 C459 46.7 456 43.1 456 36.0 C456 21.4 460.4 10 476 10 L515 10 C533.0 10 538 26.3 538 47.0 C538 63.0 535 67.0 535 74 A10 10 0 0 0 555 74 C555 67.0 552 63.0 552 47.0 C552 26.3 557.0 10 575 10 L628 10 C641.2 10 645 18.4 645 29.0 C645 31.2 642 34.4 642 40 A8 8 0 0 0 658 40 C658 34.4 655 31.2 655 29.0 C655 18.4 658.8 10 672 10 L720 10 L720 0 Z'/%3E%3Cpath d='M65.5 55.0 Q63.8 61.0 66.0 65.5' fill='none' stroke='%23fff' stroke-opacity='.2' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M166.8 29.5 Q165.7 33.7 167.2 36.9' fill='none' stroke='%23fff' stroke-opacity='.2' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M259.6 78.0 Q257.6 85.2 260.2 90.6' fill='none' stroke='%23fff' stroke-opacity='.2' stroke-width='2.6' stroke-linecap='round'/%3E%3Cpath d='M366.9 23.5 Q365.7 27.7 367.2 30.9' fill='none' stroke='%23fff' stroke-opacity='.2' stroke-width='1.6' stroke-linecap='round'/%3E%3Cpath d='M445.9 48.5 Q444.4 53.9 446.4 58.0' fill='none' stroke='%23fff' stroke-opacity='.2' stroke-width='2.0' stroke-linecap='round'/%3E%3Cpath d='M540.5 69.0 Q538.8 75.0 541.0 79.5' fill='none' stroke='%23fff' stroke-opacity='.2' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M646.4 36.0 Q645.0 40.8 646.8 44.4' fill='none' stroke='%23fff' stroke-opacity='.2' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;background-size:720px 110px}
+.usos + section{padding-top:calc(7rem + 50px)}
+.usos .eyebrow{color:var(--oro-claro)}
+.usos .sec-head h2{color:var(--crema-2)}
+.usos .sec-head h2 em{color:var(--oro-claro)}
+.usos .sec-head p{color:rgba(237,229,210,.86)}
+.usos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 3.5rem}
+.uso{padding:1.6rem 0 2rem;border-top:1px solid rgba(220,191,110,.32)}
+.uso h3{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:1.8rem;color:var(--oro-claro);line-height:1.1}
+.uso p{margin-top:.55rem;color:rgba(237,229,210,.84);font-size:1.02rem;max-width:30ch}
+
+/* ---------- INGREDIENTES ---------- */
+.ingredientes{background:var(--crema)}
+.ing-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:rgba(44,58,28,.15);
+  border:1px solid rgba(44,58,28,.15);
+}
+.ing{
+  background:var(--crema);padding:2rem 1.4rem;text-align:center;
+  transition:background .25s,color .25s;
+}
+.ing:hover{background:var(--guinda);color:var(--crema-2)}
+.ing:hover .ing-n,.ing:hover .ing-pct{color:var(--crema-2)}
+.ing .ing-ic{font-size:2rem;margin-bottom:.7rem}
+.ing-n{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--olivo);font-weight:600}
+.ing-pct{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--talavera);margin-top:.4rem;letter-spacing:.08em}
+
+/* ---------- ESCALA PICOR ---------- */
+.picor-wrap{
+  margin-top:3rem;background:var(--crema-2);
+  border:1px solid rgba(44,58,28,.18);padding:2.5rem 2.4rem;
+}
+.picor-wrap .lab{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--guinda);margin-bottom:1.2rem}
+.picor-escala{position:relative;padding-top:20px}
+.picor-flecha{position:absolute;top:0;left:80%;transform:translateX(-50%);width:0;height:0;
+  border-left:10px solid transparent;border-right:10px solid transparent;border-top:14px solid var(--olivo)}
+.picor-bar{display:flex;height:46px;border-radius:3px;overflow:hidden}
+.picor-bar div{flex:1;display:flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-size:.62rem;color:rgba(255,255,255,.85);letter-spacing:.05em}
+.p1{background:#caa24a}.p2{background:#c47a2c}.p3{background:#b9402f}
+.p4{background:#982a1f}.p5{background:#6e1b13}
+.picor-marker{margin-top:.9rem;font-size:.9rem;color:var(--humo)}
+.picor-marker strong{color:var(--guinda)}
+
+/* ---------- PROCESO TIMELINE ---------- */
+.proceso{background:var(--talavera);color:var(--crema-2)}
+.proceso .sec-head h2{color:var(--crema-2)}
+.proceso .sec-head h2 em{color:var(--oro-claro)}
+.proceso .sec-head .eyebrow{color:var(--oro-claro)}
+.proceso .sec-head p{color:rgba(237,229,210,.8)}
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid rgba(220,191,110,.3)}
+.paso{padding:2.4rem 1.6rem;border-right:1px solid rgba(220,191,110,.2);position:relative}
+.paso:last-child{border-right:none}
+.paso .step{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--oro-claro);letter-spacing:.1em}
+.paso h4{font-family:'Playfair Display',serif;font-size:1.35rem;margin:1rem 0 .6rem;color:var(--crema-2);font-weight:700}
+.paso p{font-size:.92rem;color:rgba(237,229,210,.78)}
+
+/* ---------- COTIZA / CTA ---------- */
+.cotiza{background:var(--guinda);color:var(--crema-2);text-align:center;padding:8rem 6vw;position:relative}
+.cotiza::before{content:"";position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:30px;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='30' viewBox='0 0 640 30'%3E%3Cpath fill='%23982a1f' d='M0 30 V17 C55 7 115 6 175 14 S295 25 355 16 S500 5 560 12 S615 19 640 17 V30 Z'/%3E%3C/svg%3E") repeat-x;background-size:640px 30px}
+.dudas{padding-bottom:calc(7rem + 185px)}
+.cuchara{position:absolute;bottom:calc(100% - 4px);left:50%;margin-left:-262px;width:300px;height:180px;overflow:visible;pointer-events:none;z-index:3;
+  filter:drop-shadow(0 7px 7px rgba(28,26,18,.22))}
+.cuchara .gota{transform-box:fill-box;transform-origin:50% 0;animation:gota 2.8s linear infinite}
+.cuchara .onda{transform-box:fill-box;transform-origin:center;opacity:0;animation:onda 2.8s linear infinite}
+@keyframes gota{
+  0%{transform:scale(.15);opacity:0}
+  12%{transform:scale(.55);opacity:1}
+  48%{transform:scale(1);animation-timing-function:cubic-bezier(.55,0,.9,.4)}
+  58%{transform:translateY(5px) scale(.92,1.12);animation-timing-function:cubic-bezier(.6,0,1,.6)}
+  86%{transform:translateY(46px) scale(.9,1.15);opacity:1}
+  92%,100%{transform:translateY(54px) scale(.9,1.1);opacity:0}
+}
+@keyframes onda{
+  0%,86%{transform:scale(.2);opacity:0}
+  89%{opacity:1}
+  100%{transform:scale(1.6);opacity:0}
+}
+.cotiza .eyebrow{color:var(--oro-claro)}
+.cotiza h2{
+  font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,5rem);
+  font-weight:800;line-height:1;margin:1.2rem 0 1.4rem;letter-spacing:-.01em;
+}
+.cotiza h2 em{font-style:italic;color:var(--oro-claro)}
+.cotiza p{font-size:1.15rem;color:rgba(237,229,210,.9);max-width:46ch;margin:0 auto 2.6rem}
+.precio-card{
+  display:inline-flex;flex-direction:column;align-items:center;
+  background:var(--crema-2);color:var(--olivo);
+  padding:2.4rem 3.4rem;border-radius:3px;margin-bottom:2.6rem;
+  box-shadow:0 20px 50px rgba(0,0,0,.28);
+}
+.precio-card .pl{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--humo)}
+.precio-card .pp{font-family:'Playfair Display',serif;font-size:3.6rem;font-weight:800;line-height:1;margin:.4rem 0}
+.precio-card .pp small{font-size:1.2rem;color:var(--guinda)}
+.precio-card .pd{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--humo)}
+.cotiza .btn-primary{background:var(--olivo);font-size:.9rem;padding:18px 40px}
+.cotiza .btn-primary:hover{background:var(--talavera)}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--olivo);color:var(--crema);padding:4.5rem 6vw 2.5rem}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem;
+  padding-bottom:3rem;border-bottom:1px solid rgba(220,191,110,.2)}
+.foot-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:2rem;letter-spacing:.12em;color:var(--crema-2)}
+.foot-brand + p{margin-top:1rem;color:rgba(237,229,210,.7);max-width:34ch;font-size:.95rem}
+.foot-col h5{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--oro-claro);margin-bottom:1.2rem}
+.foot-col a{display:block;color:rgba(237,229,210,.78);font-size:.95rem;margin-bottom:.6rem;transition:color .2s}
+.foot-col a:hover{color:var(--crema-2)}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+  padding-top:1.8rem;font-family:'Space Mono',monospace;font-size:.7rem;color:rgba(237,229,210,.6);letter-spacing:.05em}
+.disclaimer{max-width:680px;margin:1.6rem auto 0;font-size:.66rem;color:rgba(237,229,210,.45);
+  font-family:'Space Mono',monospace;line-height:1.7;text-align:left}
+
+/* ---------- DUDAS (FAQ) ---------- */
+.dudas{background:var(--crema-2)}
+.dudas-list{max-width:820px;border-top:1px solid rgba(44,58,28,.2)}
+.dudas-list details{border-bottom:1px solid rgba(44,58,28,.2)}
+.dudas-list summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;
+  padding:1.35rem 0;font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--olivo);
+}
+.dudas-list summary::-webkit-details-marker{display:none}
+.dudas-list summary::after{
+  content:"+";font-family:'Space Mono',monospace;font-size:1.3rem;font-weight:400;color:var(--guinda);
+  flex:none;transition:transform .2s;
+}
+.dudas-list details[open] summary::after{transform:rotate(45deg)}
+.dudas-list details p{padding:0 2.5rem 1.5rem 0;color:var(--humo);font-size:1.05rem;max-width:62ch}
+.dudas-list details a{color:var(--guinda);border-bottom:1px solid currentColor}
+
+/* ---------- BARRA MÓVIL ---------- */
+.barra-movil{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:var(--crema-2);border-top:1px solid rgba(44,58,28,.2);
+  box-shadow:0 -8px 24px rgba(28,26,18,.14);
+  transform:translateY(110%);transition:transform .3s ease;
+}
+.barra-movil.visible{transform:none}
+.barra-movil .btn-primary{display:block;text-align:center;padding:15px 20px}
+.barra-movil .btn-primary:hover{transform:none}
+
+/* ---------- RAYOS AL PASAR EL CURSOR ---------- */
+.btn-primary{position:relative;display:inline-block}
+.rayos{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.rayos path{fill:none;stroke:var(--oro);stroke-linecap:round;opacity:0;
+  transition:opacity .12s ease,stroke-dashoffset .38s cubic-bezier(.2,.8,.3,1)}
+.rayos .l{stroke-dasharray:1;stroke-dashoffset:1}
+.cotiza .rayos path{stroke:var(--oro-claro)}
+@media (hover:hover){
+  a:hover>.rayos path,a:focus-visible>.rayos path{opacity:1;stroke-dashoffset:0;transition-delay:var(--d)}
+}
+
+/* ---------- FOCO Y MOVIMIENTO ---------- */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--talavera-claro);outline-offset:3px}
+.ticker-bar :focus-visible,.usos :focus-visible,.proceso :focus-visible,.cotiza :focus-visible,footer :focus-visible{outline-color:var(--oro-claro)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ticker-track,.sello-ring{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  .barra-movil{transition:none}
+  .rayos path{transition:none}
+  .cuchara .gota,.cuchara .onda{animation:none}
+}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-right{order:-1}
+  .prospectus-inner{grid-template-columns:1fr 1fr}
+  .pcell{border-bottom:1px solid rgba(220,191,110,.18)}
+  .razones{grid-template-columns:1fr 1fr}
+  .producto{grid-template-columns:1fr}
+  .prod-img{min-height:420px}
+  .pasos{grid-template-columns:1fr 1fr}
+  .usos-grid{grid-template-columns:1fr 1fr;gap:0 2rem}
+  .foot-top{grid-template-columns:1fr}
+  nav{position:sticky}
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:var(--crema);border-bottom:1px solid rgba(44,58,28,.18);padding:6px 6vw 18px;
+    box-shadow:0 14px 24px rgba(28,26,18,.12)}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:14px 0;font-size:.8rem;border-bottom:1px solid rgba(44,58,28,.1)}
+  .navlinks a.nav-cta{text-align:center;margin-top:14px;padding:14px 18px;border-bottom:none}
+  .burger{display:flex}
+  .hero-right{min-height:46vh}
+  .barra-movil{display:block}
+  footer{padding-bottom:7rem}
+}
+@media(max-width:560px){
+  section{padding:4.5rem 7vw}
+  .prospectus-inner{grid-template-columns:1fr 1fr}
+  .razones{grid-template-columns:1fr}
+  .usos-grid{grid-template-columns:1fr}
+  .usos::after{height:77px;background-size:504px 77px}
+  .usos + section{padding-top:calc(4.5rem + 40px)}
+  .dudas{padding-bottom:calc(4.5rem + 140px)}
+  .cuchara{width:216px;height:130px;margin-left:-189px}
+  .pcell{padding:28px 20px}
+  .pcell .v{font-size:2rem}
+  .pcell .v-sm{font-size:1.25rem}
+  .razon{border-right:none}
+  .pasos{grid-template-columns:1fr}
+  .paso{border-right:none;border-bottom:1px solid rgba(220,191,110,.2)}
+  .ing-grid{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:3rem}
+  .precio-card{padding:2rem}
+}
+
+/* ================= CONTORNOS DE TINTA ================= */
+.ticker-bar{height:40px;padding:0;display:flex;align-items:center;background:var(--crema-2);color:var(--tinta);border-bottom:2px solid var(--tinta)}
+.ticker-bar .up,.ticker-bar .dot{color:var(--guinda)}
+nav{top:40px;border-bottom:2px solid var(--tinta)}
+
+/* botones derechos, con tinta */
+.btn-primary,.nav-cta{border:2px solid var(--tinta);border-radius:10px;box-shadow:3px 3px 0 var(--tinta);
+  transition:transform .15s,box-shadow .15s,background .2s}
+.btn-primary:hover,.nav-cta:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--tinta)}
+.barra-movil{border-top:2px solid var(--tinta)}
+.barra-movil .btn-primary:hover{transform:none;box-shadow:4px 4px 0 var(--tinta)}
+
+.hero-right{border-left:2px solid var(--tinta)}
+.hero-medallion{border:2px solid var(--tinta);border-radius:16px 11px 18px 10px/11px 18px 10px 16px;box-shadow:3px 3px 0 var(--tinta);background:var(--crema-2);backdrop-filter:none;transform:rotate(-1.5deg)}
+.prospectus{border-top:2px solid var(--tinta);border-bottom:2px solid var(--tinta)}
+.pcell{border-right:2px solid var(--tinta)}
+
+.razones{border-top:none;gap:1.7rem}
+.razon{border:2px solid var(--tinta);border-radius:16px 11px 18px 10px/11px 18px 10px 16px;background:var(--crema);box-shadow:3px 3px 0 var(--tinta);padding:2rem 1.6rem 2.2rem}
+.razon:nth-child(odd){transform:rotate(-.5deg)}
+.razon:nth-child(even){transform:rotate(.45deg)}
+.razon:hover{background:var(--crema-2)}
+.ing-grid{gap:2px;background:var(--tinta);border:2px solid var(--tinta);border-radius:14px;overflow:hidden;box-shadow:4px 4px 0 var(--tinta)}
+.picor-wrap{border:2px solid var(--tinta);border-radius:16px 11px 18px 10px/11px 18px 10px 16px;box-shadow:3px 3px 0 var(--tinta)}
+.picor-bar{height:52px;border:2px solid var(--tinta);border-radius:10px}
+.picor-bar div + div{border-left:2px solid var(--tinta)}
+.picor-bar div{color:var(--crema-2)}
+.picor-bar .p1,.picor-bar .p2{color:var(--tinta)}
+.picor-flecha{border-top-color:var(--tinta)}
+.pasos{border-top:none;gap:1.5rem}
+.pasos .paso{border:2px solid var(--tinta);border-radius:16px 11px 18px 10px/11px 18px 10px 16px;background:rgba(28,26,18,.2);box-shadow:3px 3px 0 var(--tinta)}
+.pasos .paso:nth-child(odd){transform:rotate(-.5deg)}
+.pasos .paso:nth-child(even){transform:rotate(.45deg)}
+.dudas-list{border-top:2px solid var(--tinta)}
+.dudas-list details{border-bottom:2px solid var(--tinta)}
+.uso{border-top:2px dashed rgba(220,191,110,.55)}
+.precio-card{border:2px solid var(--tinta);border-radius:16px 11px 18px 10px/11px 18px 10px 16px;box-shadow:4px 4px 0 var(--tinta)}
+footer{border-top:2px solid var(--tinta)}
+
+@media(max-width:900px){
+  .hero-right{border-left:none;border-bottom:2px solid var(--tinta)}
+  .pcell{border-bottom:2px solid var(--tinta)}
+}
+@media(max-width:560px){
+  .picor-bar div{font-size:.52rem}
+  .razones,.pasos{gap:1.3rem}
+}
+.usos-cta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-top:2.6rem}
+.btn-sec{display:inline-block;background:var(--crema-2);color:var(--olivo);padding:14px 34px;
+  font-family:'Space Mono',monospace;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  border:2px solid var(--tinta);border-radius:10px;box-shadow:3px 3px 0 var(--tinta);transition:transform .15s,box-shadow .15s,background .2s}
+.btn-sec:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--tinta);background:var(--oro-claro)}
+.pronto{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(237,229,210,.75)}
+.picor-bar div{text-transform:uppercase;text-align:center;line-height:1.15;padding:0 4px}
+.navlinks a.nav-ig{color:var(--guinda);text-transform:none;letter-spacing:.02em;font-weight:700}
+.navlinks a.nav-ig:hover{color:var(--olivo)}
+.btn-sec{position:relative}
+.usos .rayos path{stroke:var(--oro-claro)}
+.aviso{max-width:820px;margin-top:3rem;display:flex;align-items:center;justify-content:space-between;gap:1.6rem 2rem;flex-wrap:wrap;
+  padding:1.8rem 2rem;background:var(--crema);border:2px solid var(--tinta);border-radius:16px 11px 18px 10px/11px 18px 10px 16px;box-shadow:3px 3px 0 var(--tinta)}
+.aviso h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--olivo);line-height:1.15}
+.aviso p{color:var(--humo);max-width:40ch;margin-top:.35rem}
+.btn-aviso{background:var(--olivo)}
+.btn-aviso:hover{background:var(--talavera)}
+.precio-card .pd{margin-top:.5rem}
+.aviso{display:block}
+.aviso-form{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:1rem;margin-top:1.4rem;position:relative}
+.campo{display:block;font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--humo)}
+.campo input{display:block;width:100%;margin-top:.4rem;padding:12px;font-family:'Spectral',Georgia,serif;font-size:1rem;letter-spacing:0;text-transform:none;
+  color:var(--tinta);background:var(--crema-2);border:2px solid var(--tinta);border-radius:8px}
+.campo input:focus-visible{outline:3px solid var(--talavera-claro);outline-offset:2px}
+.aviso-pie{grid-column:1/-1;display:flex;align-items:center;gap:1rem 1.4rem;flex-wrap:wrap}
+.aviso-pie[hidden],.campo[hidden]{display:none}
+.aviso-nota{font-size:.86rem;color:var(--humo);max-width:34ch;line-height:1.4}
+.aviso-nota a,.aviso-msg a{color:var(--guinda);border-bottom:1px solid currentColor}
+.aviso-msg{grid-column:1/-1;font-size:1.1rem;font-weight:600;color:var(--olivo)}
+.trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+button.btn-aviso:disabled{opacity:.6;cursor:default}
+@media (hover:hover){button:hover>.rayos path,button:focus-visible>.rayos path{opacity:1;stroke-dashoffset:0;transition-delay:var(--d)}}
+@media(max-width:760px){.aviso-form{grid-template-columns:1fr}}
+.privacidad{max-width:680px;margin:1.6rem auto 0;font-size:.82rem;color:rgba(237,229,210,.72)}
+.privacidad summary{cursor:pointer;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--oro-claro)}
+.privacidad div{margin-top:.8rem}
+.privacidad p{margin-bottom:.6rem;line-height:1.55}
+.privacidad a{color:var(--crema-2);border-bottom:1px solid currentColor}
+.privacidad strong{color:var(--crema-2);font-weight:600}
+section[id],#privacidad{scroll-margin-top:96px}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <span class="mono">TACO SIN SALSA NO ES TACO</span>
+    <span class="dot">●</span>
+    <span class="mono">¿CON TODO, JOVEN?</span>
+    <span class="dot">●</span>
+    <span class="mono">YA ME ENCHILÉ… PÁSAME MÁS</span>
+    <span class="dot">●</span>
+    <span class="mono">ENCHÍLAME OTRA</span>
+    <span class="dot">●</span>
+    <span class="mono">LLORO, PERO NO DEJO DE COMER</span>
+    <span class="dot">●</span>
+    <span class="mono">DE CHILE, MOLE Y POZOLE</span>
+    <span class="dot">●</span>
+    <span class="mono">PÁSAME LA SALSA Y NADIE SALE HERIDO</span>
+    <span class="dot">●</span>
+    <span class="mono">EL QUE SE ENCHILA, REPITE</span>
+    <span class="dot">●</span>
+    <span class="mono">TACO SIN SALSA NO ES TACO</span>
+    <span class="dot">●</span>
+    <span class="mono">¿CON TODO, JOVEN?</span>
+    <span class="dot">●</span>
+    <span class="mono">YA ME ENCHILÉ… PÁSAME MÁS</span>
+    <span class="dot">●</span>
+    <span class="mono">ENCHÍLAME OTRA</span>
+    <span class="dot">●</span>
+    <span class="mono">LLORO, PERO NO DEJO DE COMER</span>
+    <span class="dot">●</span>
+    <span class="mono">DE CHILE, MOLE Y POZOLE</span>
+    <span class="dot">●</span>
+    <span class="mono">PÁSAME LA SALSA Y NADIE SALE HERIDO</span>
+    <span class="dot">●</span>
+    <span class="mono">EL QUE SE ENCHILA, REPITE</span>
+    <span class="dot">●</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="brand">NATIVA</div>
+  <div class="navlinks" id="menu">
+    <a href="#tesis">Por qué NATIVA</a>
+    <a href="#usos">Cómo usarla</a>
+    <a href="#ingredientes">Composición</a>
+    <a href="#proceso">El proceso</a>
+    <a href="https://www.instagram.com/nativa.macha/" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram de NATIVA: @nativa.macha">@nativa.macha</a>
+    <a href="https://wa.me/528672136560?text=Hola%2C%20me%20interesa%20cotizar%20un%20lote%20de%20NATIVA%20Salsa%20Macha%20Artesanal.%20%C2%BFMe%20podr%C3%ADas%20compartir%20precio%20por%20unidad%2C%20cantidad%20m%C3%ADnima%20y%20opciones%20de%20entrega%3F" target="_blank" class="nav-cta">Cotizar lote</a>
+  </div>
+  <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-left">
+
+    <h1>A darle,<br>que es<em>salsa macha.</em></h1>
+    <p class="hero-sub">Salsa macha artesanal de Tlaxcala: chile de árbol tatemado, semillas tostadas y <strong>aceite de oliva extra virgen</strong>. Ingredientes orgánicos, sin conservadores.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/528672136560?text=Hola%2C%20quiero%20reservar%20un%20frasco%20de%20NATIVA%20Salsa%20Macha%20Artesanal.%20%C2%BFMe%20podr%C3%ADas%20confirmar%20disponibilidad%2C%20precio%20y%20m%C3%A9todo%20de%20pago%3F" target="_blank" rel="noopener" class="btn-primary" data-cta>Probar NATIVA — $200</a>
+      <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--humo);letter-spacing:.08em;margin-top:.6rem">250 ml · entrega local · lote artesanal</p>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="jar-hero.webp" width="1200" height="1600" fetchpriority="high" decoding="async" alt="Frasco de NATIVA Salsa Macha Artesanal sostenido en la mano, entre árboles">
+    <!-- sello giratorio -->
+    <svg class="sello" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+      <circle cx="60" cy="60" r="56" fill="#ede5d2" stroke="#982a1f" stroke-width="2"/>
+      <g class="sello-ring">
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#1f3a6e" stroke-width="1" stroke-dasharray="2 3"/>
+        <text font-family="'Space Mono',monospace" font-size="9.5" letter-spacing="2.4" fill="#2c3a1c" font-weight="700">
+          <textPath href="#circ" startOffset="0%">· ARTESANAL · 100% NATURAL · HECHO EN MÉXICO </textPath>
+        </text>
+      </g>
+      <text x="60" y="66" text-anchor="middle" font-family="'Playfair Display',serif" font-size="20" font-weight="800" fill="#982a1f">250</text>
+      <text x="60" y="78" text-anchor="middle" font-family="'Space Mono',monospace" font-size="7" fill="#2c3a1c">ML</text>
+    </svg>
+    <div class="hero-medallion">
+      <div class="lab">¿Qué tanto pica?</div>
+      <div class="val">Pica sabroso</div>
+      <div class="note">Sin miedo al chile</div>
+    </div>
+  </div>
+</header>
+
+<!-- PROSPECTUS STRIP -->
+<div class="prospectus">
+  <div class="prospectus-inner">
+    <div class="pcell reveal">
+      <div class="k">Volumen del frasco</div>
+      <div class="v">250<small style="font-size:1.1rem"> ml</small></div>
+      <div class="d">Frasco de vidrio</div>
+    </div>
+    <div class="pcell reveal">
+      <div class="k">Origen</div>
+      <div class="v">Tlaxcala</div>
+      <div class="d">México · hecha a mano</div>
+    </div>
+    <div class="pcell reveal">
+      <div class="k">Pureza</div>
+      <div class="v v-sm">Sin conservadores</div>
+      <div class="d">Solo lo que la tierra da</div>
+    </div>
+    <div class="pcell reveal">
+      <div class="k">Base</div>
+      <div class="v">Oliva</div>
+      <div class="d">Aceite extra virgen</div>
+    </div>
+  </div>
+</div>
+
+<!-- TESIS -->
+<section id="tesis" class="tesis">
+  <div class="sec-head reveal">
+    <span class="eyebrow">¿Por qué NATIVA?</span>
+    <h2>Por qué este frasco<br>vale <em>cada peso.</em></h2>
+    <p>Aceite de oliva extra virgen donde lo común es un aceite neutro, y nada que no se pueda pronunciar. Con el sazón no se juega.</p>
+  </div>
+  <div class="razones">
+    <div class="razon reveal">
+      <div class="ic">🫒</div>
+      <div class="num">01 · LA BASE</div>
+      <h3>Aceite de oliva, no relleno</h3>
+      <p>Más cuerpo, más aroma y una base que se antoja sola con pan.</p>
+    </div>
+    <div class="razon reveal">
+      <div class="ic">🌶️</div>
+      <div class="num">02 · EL CARÁCTER</div>
+      <h3>Chile de árbol tatemado</h3>
+      <p>Tostado a punto: calor con sabor a humo, no ardor vacío.</p>
+    </div>
+    <div class="razon reveal">
+      <div class="ic">🥜</div>
+      <div class="num">03 · LA TEXTURA</div>
+      <h3>Semillas y cacahuate</h3>
+      <p>Lo crujiente que hace que una cucharada pida la siguiente.</p>
+    </div>
+    <div class="razon reveal">
+      <div class="ic">🌿</div>
+      <div class="num">04 · LA PUREZA</div>
+      <h3>Cero conservadores</h3>
+      <p>100% natural, sin aditivos. Por eso se refrigera al abrir.</p>
+    </div>
+    <div class="razon reveal">
+      <div class="ic">🌄</div>
+      <div class="num">05 · EL ORIGEN</div>
+      <h3>Hecha en Tlaxcala</h3>
+      <p>De ahí sale cada frasco, con receta de raíz.</p>
+    </div>
+    <div class="razon reveal">
+      <div class="ic">🤲</div>
+      <div class="num">06 · EL OFICIO</div>
+      <h3>Lotes pequeños, a mano</h3>
+      <p>Lo bueno se hace de a poquito.</p>
+    </div>
+  </div>
+</section>
+
+<!-- USOS -->
+<section id="usos" class="usos">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Cómo usarla</span>
+    <h2>Pónsela a <em>todo.</em></h2>
+    <p>Ahumada, tostada y crujiente. Como el ajonjolí: en todos los moles.</p>
+  </div>
+  <div class="usos-grid reveal">
+    <div class="uso"><h3>Tacos</h3><p>En la forma de agarrar el taco se conoce al tragón. Con una cucharada encima, más.</p></div>
+    <div class="uso"><h3>Huevos</h3><p>Ese huevo quiere sal. Y una cucharada de macha.</p></div>
+    <div class="uso"><h3>Pasta</h3><p>El aceite de la salsa como base y las semillas al final.</p></div>
+    <div class="uso"><h3>Quesos</h3><p>Sobre queso fresco, panela o una tabla para compartir.</p></div>
+    <div class="uso"><h3>Pan tostado</h3><p>Las penas con pan son buenas. Con pan y salsa, mejores.</p></div>
+    <div class="uso"><h3>Sopas y caldos</h3><p>Ahora es cuando, chile, le has de dar sabor al caldo.</p></div>
+  </div>
+  <div class="usos-cta reveal">
+    <a class="btn-sec" href="#usos" role="button" aria-disabled="true" onclick="return false">Recetas</a>
+    <span class="pronto">Próximamente</span>
+  </div>
+</section>
+
+<!-- INGREDIENTES -->
+<section id="ingredientes" class="ingredientes">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Composición</span>
+    <h2>Todo lo que entra,<br>nada que <em>sobre.</em></h2>
+    <p>Ocho ingredientes de origen natural, cada uno con su papel en la receta.</p>
+  </div>
+  <div class="ing-grid reveal">
+    <div class="ing"><div class="ing-ic">🌶️</div><div class="ing-n">Chile de árbol</div><div class="ing-pct">EL ALMA</div></div>
+    <div class="ing"><div class="ing-ic">🫒</div><div class="ing-n">Aceite de oliva</div><div class="ing-pct">EXTRA VIRGEN</div></div>
+    <div class="ing"><div class="ing-ic">🥜</div><div class="ing-n">Cacahuate</div><div class="ing-pct">CUERPO</div></div>
+    <div class="ing"><div class="ing-ic">🎃</div><div class="ing-n">Semilla de calabaza</div><div class="ing-pct">CROCANCIA</div></div>
+    <div class="ing"><div class="ing-ic">🌻</div><div class="ing-n">Semilla de girasol</div><div class="ing-pct">TEXTURA</div></div>
+    <div class="ing"><div class="ing-ic">⚪</div><div class="ing-n">Ajonjolí</div><div class="ing-pct">AROMA</div></div>
+    <div class="ing"><div class="ing-ic">🧄</div><div class="ing-n">Ajo</div><div class="ing-pct">PROFUNDIDAD</div></div>
+    <div class="ing"><div class="ing-ic">🧂</div><div class="ing-n">Sal</div><div class="ing-pct">EQUILIBRIO</div></div>
+  </div>
+
+  <div class="picor-wrap reveal">
+    <div class="lab">¿Qué tanto pica?</div>
+    <div class="picor-escala" role="img" aria-label="Picor entre «pica sabroso» y «sí pica», en una escala de «no pica» a «sí pica»">
+      <span class="picor-flecha"></span>
+      <div class="picor-bar">
+        <div class="p1">No pica</div>
+        <div class="p2">Pica poquito</div>
+        <div class="p3">Pica rico</div>
+        <div class="p4">Pica sabroso</div>
+        <div class="p5">¡Sí pica!</div>
+      </div>
+    </div>
+    <p class="picor-marker">Sin miedo al chile, aunque lo veas colorado. Pica con educación.</p>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="proceso">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Cómo se hace</span>
+    <h2>De la olla<br>al <em>frasco.</em></h2>
+    <p>Cuatro pasos, cero atajos.</p>
+  </div>
+  <div class="pasos">
+    <div class="paso reveal">
+      <div class="step">PASO 01</div>
+      <h4>Selección</h4>
+      <p>Elegimos chile de árbol, cacahuate y semillas de origen natural.</p>
+    </div>
+    <div class="paso reveal">
+      <div class="step">PASO 02</div>
+      <h4>Tatemado</h4>
+      <p>Chile y semillas al fuego, hasta que sueltan el sabor a humo.</p>
+    </div>
+    <div class="paso reveal">
+      <div class="step">PASO 03</div>
+      <h4>Infusión en oliva</h4>
+      <p>Todo reposa en aceite de oliva extra virgen.</p>
+    </div>
+    <div class="paso reveal">
+      <div class="step">PASO 04</div>
+      <h4>Envasado</h4>
+      <p>Cada frasco se llena, se sella y se etiqueta a mano.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DUDAS -->
+<section id="dudas" class="dudas">
+  <div class="sec-head reveal">
+    <span class="eyebrow">Dudas frecuentes</span>
+    <h2>Pregunta <em>con confianza.</em></h2>
+  </div>
+  <div class="dudas-list reveal">
+    <details>
+      <summary>¿Pica mucho?</summary>
+      <p>Entre «pica sabroso» y «¡sí pica!». Se siente, pero te deja saborear el chile tatemado, las semillas y el aceite de oliva. Si eres de los que sudan con la cátsup, empieza con media cucharadita.</p>
+    </details>
+    <details>
+      <summary>¡Auxilio, me pasé de salsa!</summary>
+      <p>Tortilla, pan o un traguito de leche. El agua no ayuda. Ya que pase el susto, otra cucharada.</p>
+    </details>
+    <details>
+      <summary>¿Qué le echan?</summary>
+      <p>Ocho cosas y ni una más: chile de árbol, aceite de oliva extra virgen, cacahuate, semilla de calabaza, semilla de girasol, ajonjolí, ajo y sal. Ojo: contiene cacahuate y ajonjolí.</p>
+    </details>
+    <details>
+      <summary>¿De dónde viene?</summary>
+      <p>De Tlaxcala, México. Allá se hace, en lotes pequeños.</p>
+    </details>
+    <details>
+      <summary>¿Cuánto me dura el frasco?</summary>
+      <p>No lleva conservadores: una vez abierto, guárdalo en el refri y acábatelo de preferencia en 30 días. En la mesa suele durar bastante menos.</p>
+    </details>
+    <details>
+      <summary>Se acabó la salsa y quedó aceite. ¿Qué hago?</summary>
+      <p>No lo tires, que es puro sabor. Fríe un huevo con él, aderézale una ensalada o moja el pan.</p>
+    </details>
+    <details>
+      <summary>¿Cómo la pido?</summary>
+      <p>Por WhatsApp, sin vueltas. Toca «Probar NATIVA — $200», manda el mensaje que ya va escrito y te confirmamos disponibilidad y forma de pago.</p>
+    </details>
+    <details>
+      <summary>¿Me la llevan?</summary>
+      <p>Por ahora la entrega es local. El dónde y el cuándo los acordamos por WhatsApp.</p>
+    </details>
+    <details>
+      <summary>¿Y si quiero muchas?</summary>
+      <p>Venga. <a href="https://wa.me/528672136560?text=Hola%2C%20me%20interesa%20cotizar%20un%20lote%20de%20NATIVA%20Salsa%20Macha%20Artesanal.%20%C2%BFMe%20podr%C3%ADas%20compartir%20precio%20por%20unidad%2C%20cantidad%20m%C3%ADnima%20y%20opciones%20de%20entrega%3F" target="_blank" rel="noopener">Escríbenos para cotizar un lote</a>: precio por unidad, cantidad mínima y opciones de entrega.</p>
+    </details>
+  </div>
+  <div class="aviso reveal">
+    <div>
+      <h3>Que no te agarre sin salsa.</h3>
+      <p>Te avisamos antes que a nadie cuando salga el siguiente lote, y tu segundo frasco te sale en $180.</p>
+    </div>
+    <form class="aviso-form" id="aviso-form" data-wa="https://wa.me/528672136560?text=Hola%2C%20av%C3%ADsame%20cuando%20salga%20el%20pr%C3%B3ximo%20lote%20de%20NATIVA%20Salsa%20Macha.">
+      <label class="campo">Nombre<input type="text" name="nombre" required maxlength="80" autocomplete="name"></label>
+      <label class="campo">Correo<input type="email" name="correo" required maxlength="120" autocomplete="email"></label>
+      <label class="campo">Teléfono (opcional)<input type="tel" name="telefono" maxlength="30" autocomplete="tel"></label>
+      <label class="trampa" aria-hidden="true">No llenar<input type="text" name="sitio" tabindex="-1" autocomplete="off"></label>
+      <div class="aviso-pie">
+        <button type="submit" class="btn-primary btn-aviso"><span class="et">Avísame del próximo lote</span></button>
+        <span class="aviso-nota">Usamos tus datos solo para avisarte de nuevos lotes. <a href="#privacidad">Aviso de privacidad</a></span>
+      </div>
+      <p class="aviso-msg" id="aviso-msg" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- COTIZA / CTA -->
+<section id="cotiza" class="cotiza">
+  <svg class="cuchara" viewBox="0 0 300 180" aria-hidden="true">
+    <defs>
+      <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#34322b"/><stop offset=".55" stop-color="#1c1a12"/><stop offset="1" stop-color="#0f0e0a"/>
+      </linearGradient>
+    </defs>
+    <g transform="rotate(20 228 90)">
+      <path fill="url(#metal)" d="M14 82 C70 84 130 86 176 86 C186 86 190 80 196 74 L196 106 C190 100 186 94 176 94 C130 94 70 96 14 98 A8 8 0 0 1 14 82 Z"/>
+      <ellipse cx="228" cy="90" rx="48" ry="30" fill="url(#metal)"/>
+      <path d="M22 88.5 C80 89.5 130 90 170 90" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="2" stroke-linecap="round"/>
+      <path d="M192 84 C198 70 216 63 236 64" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="2.2" stroke-linecap="round"/>
+      <ellipse cx="230" cy="92" rx="36" ry="20" fill="#000" fill-opacity=".28"/>
+    </g>
+    <ellipse class="onda" cx="262" cy="178" rx="10" ry="2.6" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.4"/>
+    <g transform="translate(262 119) scale(1.2)">
+      <path class="gota" d="M0 0 C4.5 7 6.5 10.5 6.5 14 A6.5 6.5 0 0 1 -6.5 14 C-6.5 10.5 -4.5 7 0 0 Z" fill="#982a1f"/>
+    </g>
+  </svg>
+  <span class="eyebrow">A la mesa</span>
+  <h2>Abre tu frasco.<br>Abre <em>el apetito.</em></h2>
+  <p>A la mesa se llama una sola vez. Aparta el tuyo.</p>
+  <div class="precio-card">
+    <span class="pl">Frasco de 250 ml</span>
+    <span class="pp"><small>$</small>200<small> MXN</small></span>
+    <span class="pd">o 2 frascos por $380</span>
+  </div>
+  <div>
+    <a href="https://wa.me/528672136560?text=Hola%2C%20quiero%20reservar%20un%20frasco%20de%20NATIVA%20Salsa%20Macha%20Artesanal.%20%C2%BFMe%20podr%C3%ADas%20confirmar%20disponibilidad%2C%20precio%20y%20m%C3%A9todo%20de%20pago%3F" target="_blank" rel="noopener" class="btn-primary" data-cta>Probar NATIVA — $200</a>
+    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:rgba(237,229,210,.6);letter-spacing:.08em;margin-top:.7rem">250 ml · entrega local · lote artesanal</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div>
+      <div class="foot-brand">NATIVA</div>
+      <p>Salsa macha artesanal hecha en Tlaxcala, México. Raíz, fuego y oficio en cada frasco.</p>
+    </div>
+    <div class="foot-col">
+      <h5>Producto</h5>
+      <a href="#ingredientes">Ingredientes</a>
+      <a href="#usos">Cómo usarla</a>
+      <a href="#proceso">Cómo se hace</a>
+      <a href="#dudas">Dudas frecuentes</a>
+      <a href="#cotiza">Comprar</a>
+    </div>
+    <div class="foot-col">
+      <h5>Contacto</h5>
+      <a href="https://wa.me/528672136560?text=Hola%2C%20me%20interesa%20cotizar%20un%20lote%20de%20NATIVA%20Salsa%20Macha%20Artesanal.%20%C2%BFMe%20podr%C3%ADas%20compartir%20precio%20por%20unidad%2C%20cantidad%20m%C3%ADnima%20y%20opciones%20de%20entrega%3F" target="_blank">Pedidos al mayoreo</a>
+      <a href="https://www.instagram.com/nativa.macha/" target="_blank">Instagram</a>
+      <a href="https://wa.me/528672136560?text=Hola%2C%20me%20interesa%20cotizar%20un%20lote%20de%20NATIVA%20Salsa%20Macha%20Artesanal.%20%C2%BFMe%20podr%C3%ADas%20compartir%20precio%20por%20unidad%2C%20cantidad%20m%C3%ADnima%20y%20opciones%20de%20entrega%3F" target="_blank">WhatsApp</a>
+      <a href="#" onclick="return false">Puntos de venta</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 NATIVA · HECHO EN MÉXICO 🇲🇽</span>
+    <span>BARRIGA LLENA, CORAZÓN CONTENTO</span>
+  </div>
+  <details class="privacidad" id="privacidad">
+    <summary>Aviso de privacidad</summary>
+    <div>
+      <p>NATIVA Salsa Macha es responsable de los datos personales que nos dejas en esta página.</p>
+      <p><strong>Qué datos pedimos:</strong> nombre, correo electrónico y, si quieres darlo, teléfono. No pedimos datos sensibles.</p>
+      <p><strong>Para qué los usamos:</strong> para avisarte cuando salga un nuevo lote de NATIVA y aplicar tu descuento en el segundo frasco. No los usamos para nada más.</p>
+      <p><strong>Con quién los compartimos:</strong> con nadie. Se guardan en una hoja de cálculo de Google a la que solo nosotros tenemos acceso.</p>
+      <p><strong>Tus derechos:</strong> puedes pedir ver, corregir o borrar tus datos, oponerte a su uso o dejar de recibir avisos escribiendo a <a href="mailto:nativa.macha@gmail.com">nativa.macha@gmail.com</a>.</p>
+      <p><strong>Cambios:</strong> si este aviso cambia, publicaremos la nueva versión en esta página. Última actualización: noviembre de 2026.</p>
+    </div>
+  </details>
+  <p class="disclaimer">Una vez abierto, refrigera el frasco y consúmelo de preferencia dentro de 30 días.</p>
+</footer>
+
+<div class="barra-movil" id="barra">
+  <a href="https://wa.me/528672136560?text=Hola%2C%20quiero%20reservar%20un%20frasco%20de%20NATIVA%20Salsa%20Macha%20Artesanal.%20%C2%BFMe%20podr%C3%ADas%20confirmar%20disponibilidad%2C%20precio%20y%20m%C3%A9todo%20de%20pago%3F" target="_blank" rel="noopener" class="btn-primary">Probar NATIVA — $200</a>
+</div>
+
+<script>
+// Menú móvil
+const burger=document.querySelector('.burger'), menu=document.getElementById('menu');
+function setMenu(open){
+  menu.classList.toggle('open',open);
+  burger.setAttribute('aria-expanded',open);
+  burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+}
+burger.addEventListener('click',()=>setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+// Barra de compra en móvil: aparece cuando ningún botón de compra está a la vista
+const barra=document.getElementById('barra'), vistos=new Set();
+const ioCta=new IntersectionObserver((es)=>{
+  es.forEach(e=>e.isIntersecting?vistos.add(e.target):vistos.delete(e.target));
+  barra.classList.toggle('visible',vistos.size===0);
+});
+document.querySelectorAll('[data-cta]').forEach(b=>ioCta.observe(b));
+
+// Rayos dibujados a mano alrededor de los botones
+const NS='http://www.w3.org/2000/svg';
+function rayos(el){
+  let svg=el.querySelector('.rayos');
+  if(!svg){svg=document.createElementNS(NS,'svg');svg.setAttribute('class','rayos');svg.setAttribute('aria-hidden','true');el.appendChild(svg);}
+  const w=el.offsetWidth,h=el.offsetHeight; if(!w) return;
+  const s=Math.min(1,Math.max(.55,h/50)),g=8*s,n=Math.max(5,Math.round(w/36)|1);
+  let out='';
+  const ray=(x,y,deg,i,corto)=>{
+    const j=Math.sin(i*12.9898)*.5, a=(deg+j*8)*Math.PI/180, dx=Math.cos(a), dy=-Math.sin(a);
+    const L=(corto?7:17)*s*(1+j*.3), d=Math.round(Math.abs(i-(n-1)/2)*45);
+    const p=k=>(x+dx*k).toFixed(1)+' '+(y+dy*k).toFixed(1);
+    out+='<path class="l" pathLength="1" style="--d:'+d+'ms" stroke-width="'+(2.6*s).toFixed(2)+'" d="M'+p(g)+' L'+p(g+L)+'"/>';
+    if(corto) out+='<path style="--d:'+(d+160)+'ms" stroke-width="'+(3*s).toFixed(2)+'" d="M'+p(g+L+6*s)+' h.01"/>';
+  };
+  for(let i=0;i<n;i++){const t=i/(n-1); ray(t*w,0,150-120*t,i,i%2);}
+  ray(0,h*.55,190,-1,1); ray(w,h*.55,-10,n,1);
+  svg.innerHTML=out;
+}
+const roRayos=new ResizeObserver(es=>es.forEach(e=>rayos(e.target)));
+document.querySelectorAll('.hero .btn-primary,.cotiza .btn-primary,.nav-cta,.btn-sec,.btn-aviso').forEach(el=>roRayos.observe(el));
+
+// Lista de avisos de lote (se guarda en Google Sheets)
+const fAviso=document.getElementById('aviso-form');
+if(fAviso){
+  const bt=fAviso.querySelector('button'), et=bt.querySelector('.et'), msg=document.getElementById('aviso-msg');
+  fAviso.addEventListener('submit',async ev=>{
+    ev.preventDefault();
+    bt.disabled=true; et.textContent='Enviando…'; msg.hidden=true;
+    try{
+      await fetch("https://script.google.com/macros/s/AKfycbwXr36wg6KIAjSiUfPHznD-p8iWvjtoGwEcUggrN9GVHHpBwHRJjxuk7seoEk_sOQPR/exec",{method:'POST',mode:'no-cors',body:new URLSearchParams(new FormData(fAviso))});
+      fAviso.querySelectorAll('.campo,.aviso-pie').forEach(n=>n.hidden=true);
+      msg.textContent='¡Listo! Te avisamos en cuanto haya salsa.'; msg.hidden=false;
+    }catch(err){
+      bt.disabled=false; et.textContent='Avísame del próximo lote';
+      msg.innerHTML='No se pudo enviar. Revisa tu conexión e inténtalo otra vez, o <a href="'+fAviso.dataset.wa+'" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.'; msg.hidden=false;
+    }
+  });
+}
+document.querySelectorAll('a[href="#privacidad"]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('privacidad').open=true}));
+
+// Reveal on scroll
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay = (i%3)*0.08 + 's';
+  io.observe(el);
+});
+// Respect reduced motion
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>
